@@ -11,9 +11,13 @@
    <a-text value="Elephantine - Aegyptisches Museum" rotation="270 90 270" position='0.5 0.5 0.5' ></a-text>
     
     <!-- define your gltf asset -->
-    <a-gltf-model src="https://acz997.github.io/hostet-assets/Wolf-Blender-2.82a.glb"></a-gltf-model>
-      
-   
+    <a-assets>
+    <a-asset-item id="tree" src="https://acz997.github.io/hostet-assets/Wolf-Blender-2.82a.glb"></a-asset-item>
+    </a-assets>
+
+    <  a-entity gltf-model="#Wolf-Blender-2.82a"></a-entity>
+    
+         
     <a-box position='0 0.5 0' material='opacity: 0.1;'></a-box>
     <!-- define a camera which will move according to the marker position -->
     
