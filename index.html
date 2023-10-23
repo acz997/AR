@@ -5,35 +5,33 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs>
-    <!-- create your content here. just a box for now -->
-  
+  <!-- create your content here. just a box for now -->
+
+  <a-marker preset='hiro'>
+    
    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
    <a-image src="https://acz997.github.io/hostet-assets/AR-Bild1.png" rotation="90 180 0" material.alpha 1.0  position='2.2 0 2.1'></a-image>
     
    <a-text value="Elephantine" rotation="270 90 270" position='1.5 0.5 0.5' ></a-text>
    <a-text value="Aegyptisches Museum" rotation="270 90 270" position='0.5 0.5 0.9' ></a-text> 
-   <a-text value="Test 5" rotation="270 90 270" position='0.5 1.5 1.4' ></a-text>  
+   <a-text value="Objekt 2" rotation="270 90 270" position='0.5 1.5 1.4' ></a-text>  
+   <a-box position='0 0.5 0' material='opacity: 0.2;'></a-box>  
+   </a-marker>
     
-    <!-- define your gltf asset -->
-    <a-assets>
-        <a-asset-item 
-          id="cobblestone_01_4k"
-          src="https://acz997.github.io/hostet-assets/cobblestone_01_4k.gltf" scale="0.5 0.5 0.5">
-        </a-asset-item>
-        </a-assets>
-
-        <a-entity 
-          id="cobblestone_01_4k"
-          gltf-model="#cobblestone_01_4k"
-          position="0 0 0">
-        </a-entity>
-      
              
-    <a-box position='0 0.5 0' material='opacity: 0.2;'></a-box>
-    <!-- define a camera which will move according to the marker position -->
-    <a-marker-camera preset='hiro'></a-marker-camera>
-    <!-- pattern-4x4_1000-2.patt funktioniert nicht und blockiert hiro-->
-    <a-marker-camera type="pattern" url="https://acz997.github.io/hostet-assets/pattern-4x4_1000-1.patt"> </a-marker-camera>
-    
+   
+   <a-marker preset='kanji'>
+
+   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+   <a-image src="https://acz997.github.io/hostet-assets/AR-Bild2.png" rotation="90 180 0" material.alpha 1.0  position='2.2 0 2.1'></a-image>
+   
+   <a-text value="Objekt 3" rotation="270 90 270" position='0.5 1.5 1.4' ></a-text>  
+   <a-box position='0 0.5 0' material='color: blue'; material='opacity: 0.2;'></a-box>   
+     
+   </a-marker>
+
+   <!-- define a camera which will move according to the marker position -->
+   <a-entity camera></a-entity>
+
   </a-scene>
 </body>
